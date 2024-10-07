@@ -1,0 +1,113 @@
+FONTS
+
+ОСНОВНОЙ ШРИФТ
+Georgia
+  400
+  
+Arial 
+  400
+
+ПОДКЛЮЧЕНИЕ ШРИФТОВ
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Roboto"),
+       /* Если не получилось, загрузит woff2 */
+       url("/fonts/roboto.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("/fonts/roboto.woff") format("woff");
+}
+
+/* Теперь можно использовать шрифт */
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+SHELTER ШРИФТЫ
+
+@font-face {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+
+  src: local("Georgia"),
+       url("../../assets/fonts/georgia.ttf") format("ttf"),
+       url("../../assets/fonts/georgia.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+
+  src: local("Arial"),
+       url("../../assets/fonts/arialmt.ttf") format("ttf"),
+       url("../../assets/fonts/arialmt.woff") format("woff");
+}
+
+/* Теперь можно использовать шрифты */
+
+/*
+
+body {
+  font-family: "Georgia", serif;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+*/
+
+Для переменных:
+
+first
+second
+third
+fourth
+fifth
+sixth
+seventh
+eighth
+
+Порядок свойств псевдоклассов:
+
+:hover
+:focus
+:active
+
+Подчеркивание линией снизу:
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: var(--main-decoration-color);
+
+Отключение выделения текста:
+  user-select: none;
+
+Ссылки на карту:
+//////
+1 Central Street, Boston (entrance from the store)
+
+
+18 South Park, London 
+//////
+https://maps.app.goo.gl/i1FKvBKacwNqAc5MA
+
+/* !CUSTOM SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--third-background-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-button {
+  height: 6px;
+  background-color: var(--fourth-text-color);
+}
